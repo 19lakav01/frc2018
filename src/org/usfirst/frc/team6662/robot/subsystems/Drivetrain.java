@@ -2,6 +2,7 @@ package org.usfirst.frc.team6662.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
+import edu.wpi.first.wpilibj.Ultrasonic;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import org.usfirst.frc.team6662.robot.RobotMap;
@@ -16,6 +17,9 @@ public class Drivetrain extends Subsystem {
 		   Spark m_rearRight = new Spark(RobotMap.BOTTOM_RIGHT_MOTOR);
 		   SpeedControllerGroup m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
 		   DifferentialDrive drivetrain = new DifferentialDrive(m_left, m_right);
+		   
+		   Ultrasonic sonic = new Ultrasonic(RobotMap.ULTRASONIC_ECHO_PULSE_OUTPUT,
+					RobotMap.ULTRASONIC_TRIGGER_PULSE_INPUT);
 	
 	public void drive(double leftSpeed,double rightSpeed) {
 		drivetrain.tankDrive(leftSpeed, rightSpeed);
@@ -25,7 +29,8 @@ public class Drivetrain extends Subsystem {
 		super("Drivetrain");
 		
 	}
-
+	public double getInchRange() {return sonic.getRangeInches();}
+	public Ultrasonic getSonic() {return sonic;}
 	@Override
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub

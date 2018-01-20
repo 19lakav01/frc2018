@@ -7,4 +7,6 @@ public class RobotMap {
 			 				BOTTOM_LEFT_MOTOR  = 1,
 			 				TOP_RIGHT_MOTOR    = 2, 
 			 				BOTTOM_RIGHT_MOTOR = 3;
+	 public static final int ULTRASONIC_ECHO_PULSE_OUTPUT = 1,
+							ULTRASONIC_TRIGGER_PULSE_INPUT = 1;
 }

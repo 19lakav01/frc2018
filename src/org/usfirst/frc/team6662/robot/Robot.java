@@ -35,6 +35,7 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void autonomousInit(){
+		Robot.drivetrain.getSonic().setAutomaticMode(true);
     		fieldData = DriverStation.getInstance().getGameSpecificMessage();
     		allianceSwitch = fieldData.charAt(0);
     		allianceScale = fieldData.charAt(1);
