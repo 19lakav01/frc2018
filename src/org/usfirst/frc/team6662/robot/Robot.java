@@ -70,7 +70,9 @@ public class Robot extends TimedRobot {
 	
 	@Override
 	public void autonomousPeriodic(){
+		avoidCollision.start();
     		Scheduler.getInstance().run();
+    		
 	}		
 	
 	@Override
