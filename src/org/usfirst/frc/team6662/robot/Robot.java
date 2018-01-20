@@ -20,9 +20,9 @@ public class Robot extends TimedRobot {
 	Command joystickTankDrive;
 	
 	String fieldData;
-    	String allianceSwitch;
-    	String allianceScale;
-    	String opponentSwitch;
+    	char allianceSwitch;
+    	char allianceScale;
+    	char opponentSwitch;
 	
 	@Override
 	public void robotInit() {
@@ -31,36 +31,38 @@ public class Robot extends TimedRobot {
 		joystickTankDrive = new JoystickTankDrive();
 	}
 
-	@Overrride
+	@Override
 	public void autonomousInit(){
     		fieldData = DriverStation.getInstance().getGameSpecificMessage();
     		allianceSwitch = fieldData.charAt(0);
     		allianceScale = fieldData.charAt(1);
     		opponentSwitch = fieldData.charAt(2);
+		
+		if (allianceSwitch == "L"){
+      		//code for the autonomous will go in these spaces
+    		}
+    		else if(allianceSwitch == 'R')
+  		
+    		}
+    
+    		if (allianceScale == 'L'){
+    
+    		}
+    		else if(allianceScale == 'R'){
+    		
+    		}
+    
+    		if (opponentSwitch == 'L'){
+    		
+    		}
+    		else if(opponentSwitch == 'R'){
+    		
+    		}
 	}
 	
 	@Override
 	public void autonomousPeriodic(){
-    		if (allianceSwitch == "L"){
-      		//code for the autonomous will go in these spaces
-    		}
-    		else if(allianceSwitch == "R")
-  		
-    		}
-    
-    		if (allianceScale == "L"){
-    
-    		}
-    		else if(allianceScale == "R"){
-    		
-    		}
-    
-    		if (opponentSwitch == "L"){
-    		
-    		}
-    		else if(opponentSwitch == "R"){
-    		
-    		}
+    		Scheduler.getInstance().run();
 	}		
 	
 	@Override
