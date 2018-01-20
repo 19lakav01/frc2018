@@ -9,6 +9,8 @@ package org.usfirst.frc.team6662.robot;
 
 import org.usfirst.frc.team6662.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team6662.robot.subsystems.Drivetrain;
+
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -38,10 +40,10 @@ public class Robot extends TimedRobot {
     		allianceScale = fieldData.charAt(1);
     		opponentSwitch = fieldData.charAt(2);
 		
-		if (allianceSwitch == "L"){
+		if (allianceSwitch == 'L'){
       		//code for the autonomous will go in these spaces
     		}
-    		else if(allianceSwitch == 'R')
+    		else if(allianceSwitch == 'R') {
   		
     		}
     
