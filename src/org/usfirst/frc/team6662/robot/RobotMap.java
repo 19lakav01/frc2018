@@ -7,4 +7,8 @@ public class RobotMap {
 			 				BOTTOM_LEFT_MOTOR  = 1,
 			 				TOP_RIGHT_MOTOR    = 2, 
 			 				BOTTOM_RIGHT_MOTOR = 3;
+	public static final int ENCODERLEFT_A = 0;
+	public static final int ENCODERRIGHT_A = 0;
+	public static final int ENCODERLEFT_B = 0;
+	public static final int ENCODERRIGHT_B = 0;
 }
