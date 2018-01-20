@@ -8,6 +8,9 @@ import org.usfirst.frc.team6662.robot.RobotMap;
 
 public class Drivetrain extends Subsystem {
 	
+	Encoder leftEncoder = new Encoder(ENCODERLEFT_A, ENCODERLEFT_B);
+	Encoder rightEncoder = new Encoder (ENCODERRIGHT_A, ENCODERRIGHT_B);
+	
 		   Spark m_frontLeft = new Spark(RobotMap.TOP_LEFT_MOTOR);
 		   Spark m_rearLeft = new Spark(RobotMap.BOTTOM_LEFT_MOTOR);
 		   SpeedControllerGroup m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft);
