@@ -29,6 +29,7 @@ public class Drivetrain extends Subsystem {
 		super("Drivetrain");
 		
 	}
+	public boolean isValidRange() {return sonic.isRangeValid();}
 	public double getInchRange() {return sonic.getRangeInches();}
 	public Ultrasonic getSonic() {return sonic;}
 	@Override

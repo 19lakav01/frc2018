@@ -7,6 +7,7 @@
 
 package org.usfirst.frc.team6662.robot;
 
+import org.usfirst.frc.team6662.robot.commands.AvoidCollision;
 import org.usfirst.frc.team6662.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team6662.robot.subsystems.Drivetrain;
 
@@ -20,17 +21,20 @@ public class Robot extends TimedRobot {
 	public static Drivetrain drivetrain;
 	public static OI oi;
 	Command joystickTankDrive;
+	Command avoidCollision;
 	
 	String fieldData;
     	char allianceSwitch;
     	char allianceScale;
     	char opponentSwitch;
+    	public static Boolean isAutonomous;
 	
 	@Override
 	public void robotInit() {
 		oi = new OI();
 		drivetrain = new Drivetrain();
 		joystickTankDrive = new JoystickTankDrive();
+		avoidCollision = new AvoidCollision();
 	}
 
 	@Override
@@ -40,6 +44,7 @@ public class Robot extends TimedRobot {
     		allianceSwitch = fieldData.charAt(0);
     		allianceScale = fieldData.charAt(1);
     		opponentSwitch = fieldData.charAt(2);
+    		isAutonomous = true;
 		
 		if (allianceSwitch == 'L'){
       		//code for the autonomous will go in these spaces
