@@ -19,6 +19,11 @@ public class Robot extends TimedRobot {
 	public static OI oi;
 	Command joystickTankDrive;
 	
+	String fieldData;
+    	String allianceSwitch;
+    	String allianceScale;
+    	String opponentSwitch;
+	
 	@Override
 	public void robotInit() {
 		oi = new OI();
@@ -26,6 +31,38 @@ public class Robot extends TimedRobot {
 		joystickTankDrive = new JoystickTankDrive();
 	}
 
+	@Overrride
+	public void autonomousInit(){
+    		fieldData = DriverStation.getInstance().getGameSpecificMessage();
+    		allianceSwitch = fieldData.charAt(0);
+    		allianceScale = fieldData.charAt(1);
+    		opponentSwitch = fieldData.charAt(2);
+	}
+	
+	@Override
+	public void autonomousPeriodic(){
+    		if (allianceSwitch == "L"){
+      		//code for the autonomous will go in these spaces
+    		}
+    		else if(allianceSwitch == "R")
+  		
+    		}
+    
+    		if (allianceScale == "L"){
+    
+    		}
+    		else if(allianceScale == "R"){
+    		
+    		}
+    
+    		if (opponentSwitch == "L"){
+    		
+    		}
+    		else if(opponentSwitch == "R"){
+    		
+    		}
+	}		
+	
 	@Override
 	public void teleopInit() {
 		joystickTankDrive.start();
