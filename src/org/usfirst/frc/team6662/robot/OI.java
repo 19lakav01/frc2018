@@ -11,11 +11,18 @@ import org.usfirst.frc.team6662.robot.RobotMap;
 
 public class OI {
 	
-	private Joystick stick = new Joystick(RobotMap.JOYSTICK_PORT);
+	private static Joystick stick = new Joystick(RobotMap.JOYSTICK_PORT);
 	
-	public Joystick getJoystick() {
+	public static Joystick getJoystick() {
 		return stick;
+	}
+	
+	public static boolean getTrigger()
+	{
+		return stick.getTriggerPressed();
 	}
 
 	
+	
 }
+
