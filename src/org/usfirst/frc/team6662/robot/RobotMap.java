@@ -1,4 +1,3 @@
-
 package org.usfirst.frc.team6662.robot;
 
 public class RobotMap {
@@ -13,8 +12,9 @@ public class RobotMap {
 	 public static final int ENCODER_RIGHT_A = 0;
 	 public static final int ENCODER_LEFT_B = 0;
 	 public static final int ENCODER_RIGHT_B = 0;
-	 
-	//Things for the Pneumatics system
+	 //Starting speed for auto line
+	 public static final double START_SPEED = 0.3;
+		//Things for the Pneumatics system
 	
 	//Channels for double solenoid for grabber?
 	public static final int SOLE_CHANNEL_A = 0;
@@ -23,6 +23,7 @@ public class RobotMap {
 	// Channels for single solenoids
 	public static final int SSOLE_CHANNEL = 3;
 	
+	//Analog input for the gyro
+	public static final int GYRO_ANALOG = 0;
 	 
 }
-
