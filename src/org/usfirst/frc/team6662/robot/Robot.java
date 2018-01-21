@@ -10,7 +10,7 @@ package org.usfirst.frc.team6662.robot;
 import org.usfirst.frc.team6662.robot.commands.AvoidCollision;
 import org.usfirst.frc.team6662.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team6662.robot.subsystems.Drivetrain
-import org.usfirst.frc.team6662.robot.subsystems.PneumaticsSub;
+import org.usfirst.frc.team6662.robot.subsystems.RolleyGrabber;
 import org.usfirst.frc.team6662.robot.commands.CloseClaw;
 
 import edu.wpi.first.wpilibj.DriverStation;
@@ -19,7 +19,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
 public class Robot extends TimedRobot {
-	public static PneumaticsSub pSubsystem ;
+	public static RolleyGrabber rolleyGrabber ;
 	public static Drivetrain drivetrain;
 	public static OI oi;
 	Command joystickTankDrive;
@@ -35,7 +35,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void robotInit() {
 		oi = new OI();
-		pSubsystem = new PneumaticsSub ();
+		rolleyGrabber = new RolleyGrabber ();
 		drivetrain = new Drivetrain();
 		joystickTankDrive = new JoystickTankDrive();
 		avoidCollision = new AvoidCollision();
