@@ -40,6 +40,8 @@ public class Robot extends TimedRobot {
 		joystickTankDrive = new JoystickTankDrive();
 		avoidCollision = new AvoidCollision();
 		closeClaw = new CloseClaw();
+		 
+				drivetrain.gyro.calibrate();
 	}
 
 	@Override
