@@ -41,6 +41,7 @@ public class Robot extends TimedRobot {
 		avoidCollision = new AvoidCollision();
 		closeClaw = new CloseClaw();
 		 
+		drivetrain.gyro.initGyro();
 				drivetrain.gyro.calibrate();
 	}
 
