@@ -18,6 +18,8 @@ public class Drivetrain extends Subsystem {
 		   SpeedControllerGroup m_right = new SpeedControllerGroup(m_frontRight, m_rearRight);
 		   DifferentialDrive drivetrain = new DifferentialDrive(m_left, m_right);
 		   
+	public AnalogGyro gyro = new AnalogGyro (RobotMap.GYRO_ANALOG);
+	
 		   Ultrasonic sonic = new Ultrasonic(RobotMap.ULTRASONIC_ECHO_PULSE_OUTPUT,
 					RobotMap.ULTRASONIC_TRIGGER_PULSE_INPUT);
 	
