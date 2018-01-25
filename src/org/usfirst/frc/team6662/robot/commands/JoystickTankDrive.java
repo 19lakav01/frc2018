@@ -18,7 +18,6 @@ public class JoystickTankDrive extends Command{
 
 	@Override
 	protected boolean isFinished() {
-		
 		return false;
 	}
 	
