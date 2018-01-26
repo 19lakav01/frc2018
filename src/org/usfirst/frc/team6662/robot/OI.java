@@ -7,21 +7,14 @@
 
 package org.usfirst.frc.team6662.robot;
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
-
 import org.usfirst.frc.team6662.robot.RobotMap;
 
 public class OI {
-	private static Joystick stick = new Joystick(RobotMap.JOYSTICK_PORT);
-	private static JoystickButton button1= new JoystickButton(stick, 1);
-			button1.toggleWhenPressed (drivetrain.switchModesRever);
-	// need make command to pass in 
+	
+	private Joystick stick = new Joystick(RobotMap.JOYSTICK_PORT);
+	
 	public Joystick getJoystick() {
 		return stick;
-	}
-	
-	public static boolean getTrigger() {
-		return stick.getTriggerPressed();
 	}
 	
 }
