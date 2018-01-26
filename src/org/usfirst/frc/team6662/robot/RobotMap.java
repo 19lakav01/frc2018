@@ -23,7 +23,6 @@ public class RobotMap {
 	// Channels for single solenoids
 	public static final int SSOLE_CHANNEL = 3;
 	
-	//Analog input for the gyro
-	public static final int GYRO_ANALOG = 0;
+	
 	 
 }
